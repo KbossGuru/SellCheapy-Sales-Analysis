@@ -56,4 +56,8 @@ FROM New_Sales
 GROUP BY StoreName, CountryCode
 ORDER BY TotalOrders DESC;
 
---Regions and Country that sells the most
+--Find the Regions and Country that sells the most
+SELECT Region, CountryCode, COUNT(CustomerId) AS TotalOrders
+FROM New_Sales
+GROUP BY Region, CountryCode
+ORDER BY TotalOrders DESC;
